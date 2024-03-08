@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -15,7 +16,7 @@ class WeatherService{
 
   Future<Weather> getWeather(String cityName) async {
   //  print("Test2.1");
-    final response = await http.get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=8b54385fe7f3ccaf42c650d176f4edf9'));
+    final response = await http.get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$apiKey'));
     //.get(Uri.parse('$BASE_URL?q=London&limit=5&appid=$apiKey'));
   //  print("Test2.2");
 

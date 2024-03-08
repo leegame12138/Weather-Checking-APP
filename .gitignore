@@ -1,6 +1,6 @@
 # Miscellaneous
 *.class
-*assets/.env
+*.env
 *.log
 *.pyc
 *.swp
